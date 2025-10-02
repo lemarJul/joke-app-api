@@ -4,40 +4,41 @@ Une API REST pour gérer et servir des blagues aléatoires, développée pour le
 
 ## 📋 Cahier des Charges
 
-- [X] réaliser une **API versionnée**
-- [X] environnement Node, Express, Sequelize & SQLite
-- [X] Approche MVC
-- [X] création de 4 endpoints :
-  - [X] pour **ajouter** une blague en BDD 
-  - [X] pour **consulter** toutes les blagues 
-  - [X] pour **consulter** une blague 
-  - [X] pour **consulter** une blague aléatoire
-- [X] API documentée ([Swagger](https://swagger.io/))
+- [x] réaliser une **API versionnée**
+- [x] environnement Node, Express, Sequelize & SQLite
+- [x] Approche MVC
+- [x] création de 4 endpoints :
+  - [x] pour **ajouter** une blague en BDD
+  - [x] pour **consulter** toutes les blagues
+  - [x] pour **consulter** une blague
+  - [x] pour **consulter** une blague aléatoire
+- [x] API documentée ([Swagger](https://swagger.io/))
 - [ ] la partie FRONT doit être déployée via GitHub pages
-- [ ] déploiement via [render.com](https://render.com/)
-- [ ] **readme GitHub** avec les liens vers le repo API et Swagger
-- [ ] livrables : 1 repo(GitHub) Front  & 1 repo(GitHub) Back
+- [x] déploiement via [render.com](https://render.com/)
+- [x] **readme GitHub** avec les liens vers le repo API et Swagger
+- [ ] livrables : 1 repo(GitHub) Front & 1 repo(GitHub) Back
 
 ## 🚀 Déploiement
 
 L'API est déployée sur Render.com :  
-**URL de production** : [https://votre-api-blagues.onrender.com](https://votre-api-blagues.onrender.com)
+**URL de production** : [https://joke-app-api.onrender.com](https://joke-app-api.onrender.com)
 
 ## 📚 Documentation API
 
 La documentation complète de l'API est disponible via Swagger :  
-**Swagger UI** : [https://votre-api-blagues.onrender.com/api-docs](https://votre-api-blagues.onrender.com/api-docs)
+**Swagger UI** : [https://joke-app-api.onrender.com/api/v1/docs](https://joke-app-api.onrender.com/api/v1/docs)
 
 ## 🔧 Endpoints disponibles
 
 ### Version 1 de l'API
 
-| Méthode | Endpoint                 | Description                     |
-| ------- | ------------------------ | ------------------------------- |
-| `GET`   | `/api/v1/blagues`        | Récupérer toutes les blagues    |
-| `GET`   | `/api/v1/blagues/:id`    | Récupérer une blague par son ID |
-| `GET`   | `/api/v1/blagues/random` | Récupérer une blague aléatoire  |
-| `POST`  | `/api/v1/blagues`        | Ajouter une nouvelle blague     |
+| Méthode | Endpoint               | Description                     |
+| ------- | ---------------------- | ------------------------------- |
+| `GET`   | `/api/v1/jokes`        | Récupérer toutes les blagues    |
+| `GET`   | `/api/v1/jokes/:id`    | Récupérer une blague par son ID |
+| `GET`   | `/api/v1/jokes/random` | Récupérer une blague aléatoire  |
+| `POST`  | `/api/v1/jokes`        | Ajouter une nouvelle blague     |
+| `GET`   | `/api/v1/docs`         | Documentation Swagger           |
 
 ## 📦 Installation et développement
 
