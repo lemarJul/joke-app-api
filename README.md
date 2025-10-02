@@ -4,15 +4,15 @@ Une API REST pour gérer et servir des blagues aléatoires, développée pour le
 
 ## 📋 Cahier des Charges
 
-- [ ] réaliser une **API versionnée**
-- [ ] environnement Node, Express, Sequelize & SQLite
-- [ ] Approche MVC
-- [ ] création de 4 endpoints :
-  - [ ] pour **ajouter** une blague en BDD 
-  - [ ] pour **consulter** toutes les blagues 
-  - [ ] pour **consulter** une blague 
-  - [ ] pour **consulter** une blague aléatoire
-- [ ] API documentée ([Swagger](https://swagger.io/))
+- [X] réaliser une **API versionnée**
+- [X] environnement Node, Express, Sequelize & SQLite
+- [X] Approche MVC
+- [X] création de 4 endpoints :
+  - [X] pour **ajouter** une blague en BDD 
+  - [X] pour **consulter** toutes les blagues 
+  - [X] pour **consulter** une blague 
+  - [X] pour **consulter** une blague aléatoire
+- [X] API documentée ([Swagger](https://swagger.io/))
 - [ ] la partie FRONT doit être déployée via GitHub pages
 - [ ] déploiement via [render.com](https://render.com/)
 - [ ] **readme GitHub** avec les liens vers le repo API et Swagger
