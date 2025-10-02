@@ -1,6 +1,127 @@
 const { Joke } = require("../db");
 const { Sequelize } = require("sequelize");
 
+/**
+ * @swagger
+ * components:
+ *   requestBodies:
+ *     CreateJokeRequest:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - setup
+ *               - punchline
+ *             properties:
+ *               setup:
+ *                 type: string
+ *                 description: La question de la blague
+ *                 example: Qu'est-ce qu'un crocodile qui surveille une ville ?
+ *               punchline:
+ *                 type: string
+ *                 description: La réponse de la blague
+ *                 example: Un Lacoste de sécurité !
+ *   responses:
+ *     JokesList:
+ *       description: Liste de toutes les blagues
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               success:
+ *                 type: boolean
+ *               data:
+ *                 type: array
+ *                 items:
+ *                   $ref: '#/components/schemas/Joke'
+ *               count:
+ *                 type: integer
+ *     JokeById:
+ *       description: Blague trouvée
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               success:
+ *                 type: boolean
+ *               data:
+ *                 $ref: '#/components/schemas/Joke'
+ *     JokeNotFound:
+ *       description: Blague non trouvée
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               success:
+ *                 type: boolean
+ *                 example: false
+ *               message:
+ *                 type: string
+ *                 example: "Joke not found"
+ *     RandomJoke:
+ *       description: Blague aléatoire
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               success:
+ *                 type: boolean
+ *               data:
+ *                 $ref: '#/components/schemas/Joke'
+ *     JokeCreated:
+ *       description: Blague créée avec succès
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               success:
+ *                 type: boolean
+ *               data:
+ *                 $ref: '#/components/schemas/Joke'
+ *     MissingData:
+ *       description: Données manquantes ou invalides
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               success:
+ *                 type: boolean
+ *                 example: false
+ *               message:
+ *                 type: string
+ *                 example: "Setup and punchline are required"
+ *     ServerError:
+ *       description: Erreur serveur
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               success:
+ *                 type: boolean
+ *                 example: false
+ *               message:
+ *                 type: string
+ *               error:
+ *                 type: string
+ *   parameters:
+ *     JokeId:
+ *       in: path
+ *       name: id
+ *       required: true
+ *       schema:
+ *         type: integer
+ *       description: ID de la blague
+ *       example: 1
+ */
 async function getAllJokes(req, res) {
   try {
     const jokes = await Joke.findAll();
