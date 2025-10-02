@@ -3,7 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const logger = require("morgan");
-const jokesRouter = require("./src/routers/v1/jokes.router.js");
+const V1Router = require("./src/routers/v1/index.js");
 
 module.exports = class App extends express {
   constructor() {
@@ -13,7 +13,7 @@ module.exports = class App extends express {
       .use(bodyParser.json())
       .use(logger(process.env.NODE_ENV === "production" ? "combined" : "dev"))
       // API routes
-      .use("/api/v1/jokes", jokesRouter)
+      .use("/api/v1", V1Router)
       //invalid path handler
       .use((req, res, next) => {
         res.status(404).json({ message: "Route not found" });
