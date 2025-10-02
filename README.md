@@ -13,15 +13,17 @@ Une API REST pour gérer et servir des blagues aléatoires, développée pour le
   - [x] pour **consulter** une blague
   - [x] pour **consulter** une blague aléatoire
 - [x] API documentée ([Swagger](https://swagger.io/))
-- [ ] la partie FRONT doit être déployée via GitHub pages
+- [x] la partie FRONT doit être déployée via GitHub pages
 - [x] déploiement via [render.com](https://render.com/)
 - [x] **readme GitHub** avec les liens vers le repo API et Swagger
-- [ ] livrables : 1 repo(GitHub) Front & 1 repo(GitHub) Back
+- [x] livrables : 1 repo(GitHub) Front & 1 repo(GitHub) Back
 
 ## 🚀 Déploiement
 
 L'API est déployée sur Render.com :  
 **URL de production** : [https://joke-app-api.onrender.com](https://joke-app-api.onrender.com)
+
+    🚨 Attention : Render.com peut mettre en pause les services inactifs. Le redémarrage de l'API peut prendre jusqu'à 50 secondes, voire plus, après une période d'inactivité.
 
 ## 📚 Documentation API
 
@@ -55,3 +57,9 @@ npm run dev
 # Démarrer en mode production
 npm start
 ```
+
+## 🔗 Lien du Repository Front-End
+
+Le code source du front-end est disponible sur GitHub :
+
+[https://github.com/lemarJul/joke-app-client](https://github.com/lemarJul/joke-app-client)
