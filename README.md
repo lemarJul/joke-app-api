@@ -23,7 +23,7 @@ Une API REST pour gérer et servir des blagues aléatoires, développée pour le
 L'API est déployée sur Render.com :  
 **URL de production** : [https://joke-app-api.onrender.com](https://joke-app-api.onrender.com)
 
-    🚨 Attention : Render.com peut mettre en pause les services inactifs. Le redémarrage de l'API peut prendre jusqu'à 50 secondes, voire plus, après une période d'inactivité.
+🚨 Attention : Render.com peut mettre en pause les services inactifs. Le redémarrage de l'API peut prendre jusqu'à 50 secondes, voire plus, après une période d'inactivité.
 
 ## 📚 Documentation API
 
