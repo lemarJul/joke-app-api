@@ -10,6 +10,8 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 //Todo: Database connection
+const { connectDB } = require("./src/db");
+connectDB();
 
 // Initialize Express app
 const app = express()
