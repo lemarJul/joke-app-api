@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { BASE_URL } = require("./server");
 
 const baseDefinition = {
   openapi: "3.0.0",
@@ -23,8 +24,10 @@ function makeSwaggerOptions(version) {
       },
       servers: [
         {
-          url: `http://localhost:3000/api/${version}`,
-          description: `Serveur de dev (${version})`,
+          url: `${BASE_URL}/api/${version}`,
+          description: process.env.NODE_ENV === "production" 
+            ? `Serveur de production (${version})` 
+            : `Serveur de dev (${version})`,
         },
       ],
     },
